@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hoist-common-string 1. using jest snapshots: 1. using jest snapshots 1`] = `
+
+const s1 = "foo";
+      const s2 = "foo";
+
+      const s3 = "bar";
+
+      function f1() {
+        const s4 = "baz";
+        if (true) {
+          const s5 = "baz";
+        }
+      }
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const s1 = "foo";
+const s2 = "foo";
+const s3 = "bar";
+function f1() {
+  const s4 = "baz";
+  if (true) {
+    const s5 = "baz";
+  }
+}
+
+`;
